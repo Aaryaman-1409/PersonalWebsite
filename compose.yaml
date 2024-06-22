@@ -1,0 +1,12 @@
+services:
+  personalwebsite:
+    build: .
+    volumes:
+      - ./dist:/usr/share/nginx/html
+    networks:
+      - internal-services
+networks:
+   internal-services:
+     name: internal-services
+     driver: bridge
+

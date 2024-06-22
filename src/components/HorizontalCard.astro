@@ -1,5 +1,5 @@
 ---
-const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
+const { title, img, desc, url, badge, source, target = "_blank" } = Astro.props;
 import { Image } from "astro:assets";
 const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 ---
@@ -29,12 +29,10 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
         <p class="py-1 text-1xl">{desc}</p>
         <div class="card-actions justify-end">
           {
-            tags &&
-              tags.map((tag) => (
-                <a href={`${tag_url}/${tag}`} class="badge badge-outline">
-                  {tag}
+            source &&
+                <a href={source} target={target} class="badge badge-outline">
+                  Source
                 </a>
-              ))
           }
         </div>
       </div>

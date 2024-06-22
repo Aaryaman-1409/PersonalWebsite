@@ -1,42 +1,60 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
-import createSlug from "../lib/createSlug"
-
 ---
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
-    <div class="text-5xl font-bold">Aaryaman's Personal Website</div>
+    <div class="text-5xl font-bold">Aaryaman Sharma</div>
+    <div class="text-2xl py-3 font-bold">
+      Systems Developer Analyst at <a
+        href="https://www.rokoscapital.com"
+        style="text-decoration: underline;"
+        target="_blank">Rokos Capital Management</a>
+    </div>
     <div class="mt-8">
-      <a class="btn" href="https://www.linkedin.com/in/aaryaman1409/" target="_blank"> Let's connect!</a>
+      <a
+        class="btn"
+        href="https://www.linkedin.com/in/aaryaman1409/"
+        target="_blank"
+      >
+        Let's connect!</a
+      >
     </div>
   </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+    <div class="text-3xl w-full font-bold mb-2">Recent projects</div>
   </div>
-
   <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
+    title="WebGL 3D Shader"
+    img="/projects/thumbs/uclcg.webp"
+    desc="A 3D shader written from scratch in GLSL that showcases Ray Tracing, Rasterization, and Path Tracing right in your browser."
+    url="https://uclcg.aaryaman.uk"
+    source="https://github.com/Aaryaman-1409/UCL-Projects/tree/main/Year%203%20(2023-2024)/COMP0027%20-%20Computer%20Graphics/UCL%20CG%20Renderer"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="UNIX Shell in Python"
+    img="/projects/thumbs/pythonshell.webp"
+    desc="A UNIX shell written in Python using the ANTLR parser generator. Supports common shell commands, piping, redirection, and runs directly in your browser using ttyd."
+    url="https://pythonshell.aaryaman.uk"
+    source="https://github.com/Aaryaman-1409/UCL-Projects/tree/main/Year%202%20(2022-2023)/COMP0010%20-%20Software%20Engineering/python-shell-p31"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
+    title="Touchless Kiosks"
+    img="/projects/thumbs/touchlesskiosks.webp"
+    desc="A touchless kiosk system built with MediaPipe and React that allows users to interact with any webpage using hand gestures. Features include touchless navigation, live gesture previews, and a WebExtension frontend."
+    url="https://touchlesskiosks.aaryaman.uk"
+    source="https://github.com/Aaryaman-1409/UCL-Projects/tree/main/Year%202%20(2022-2023)/COMP0016%20-%20Systems%20Engineering/Group%20Portfolio"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Permutation Generator and Solver"
+    img="/projects/thumbs/permgenerator.webp"
+    desc="A revision tool for discrete math students built with Django. Generates set permutations in Cauchy's two-line notation and solves problems such as the order, sign and cyclic form."
+    url="https://permgenerator.aaryaman.uk"
+    source="https://github.com/Aaryaman-1409/UCL-Projects/tree/main/Year%201%20(2021-2022)/ENGF0002%20-%20Design%20and%20Professional%20Skills%20CS/Scenario%202/djangoPermPostgres"
   />
 </BaseLayout>
